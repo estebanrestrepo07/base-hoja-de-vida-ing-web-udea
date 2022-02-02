@@ -1,7 +1,21 @@
-import 'styles/globals.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import PublicLayout from 'Layouts/PublicLayout';
+import Home from 'pages/Home';
+import About from 'pages/About';
+import Career from 'pages/Career';
 
-const App = () => {
-  return <div className='text-green-500'>Hoja de Vida</div>;
-};
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<PublicLayout />}>
+          <Route path='' element={<Home />} />
+          <Route path='about' element={<About />} />
+          <Route path='career' element={<Career />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
+}
 
 export default App;

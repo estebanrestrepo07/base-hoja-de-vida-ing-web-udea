@@ -3,6 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome": "^1.1.8",
+    "@fortawesome/fontawesome-free-regular": "^5.0.13",
+    "@fortawesome/fontawesome-free-solid": "^5.0.13",
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-brands-svg-icons": "^5.15.4",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/react-fontawesome": "^0.1.16",
+    "@headlessui/react": "^1.4.3",
+    "@heroicons/react": "^1.0.5",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
@@ -18,7 +27,10 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint --ext .js,.jsx .",
-    "lint:fix": "eslint --fix --ext .js,.jsx ."
+    "lint:fix": "eslint --fix --ext .js,.jsx .",
+    "build:styles": "postcss src/styles/globals.css -o src/styles.css",
+    "prebuild": "npm run build:styles",
+    "prestart": "npm run build:styles"
   },
   "eslintConfig": {
     "extends": [
@@ -39,7 +51,7 @@
     ]
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.2",
+    "autoprefixer": "^9.8.8",
     "eslint": "^8.7.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^8.3.0",
@@ -49,6 +61,7 @@
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
     "postcss": "^8.4.5",
+    "postcss-cli": "^9.1.0",
     "prettier": "^2.5.1",
     "tailwindcss": "^3.0.15"
   }
