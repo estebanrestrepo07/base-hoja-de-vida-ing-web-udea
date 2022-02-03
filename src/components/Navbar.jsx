@@ -48,7 +48,6 @@ const NavBar = () => {
                       href=''
                       className='inline-flex items-center px-4 py-2 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-green-500 text-white hover:bg-green-300 focus:outline-none focus:ring-2 focus:ring-offset-2 '
                     >
-                      {/* <PencilIcon className='-ml-1 mr-2 h-5 w-5 text-gray-500' aria-hidden='true' /> */}
                       Contact Me
                     </button>
                   </a>
@@ -111,7 +110,6 @@ const NavBar = () => {
           leaveFrom='opacity-100 scale-100'
           leaveTo='opacity-0 scale-95'
         >
-          {/* {(ref) =>} */}
           <div
             className='md:hidden absolute w-full bg-white border-y-2 border-y-blue-500'
             id='mobile-menu'
@@ -141,7 +139,6 @@ const NavBar = () => {
                   href='https://wa.link/7ol8zk'
                   className='inline-flex items-center px-4 py-2 rounded-md shadow-sm text-sm font-medium bg-green-500 text-white hover:bg-green-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
                 >
-                  {/* <PencilIcon className='-ml-1 mr-2 h-5 w-5 text-gray-500' aria-hidden='true' /> */}
                   Contact Me
                 </button>
               </a>

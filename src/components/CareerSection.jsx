@@ -9,9 +9,9 @@ const CareerSection = (props) => {
         {title}
       </h2>
       <div className='flex flex-col justify-center md:w-5/6 md:m-auto md:flex-row md:flex-wrap'>
-        {cards.map((card, index) => {
-          return <Card key={`card_${index + 1}`} card={card} />;
-        })}
+        {cards.map((card) => (
+          <Card key={card.id} card={card} />
+        ))}
       </div>
     </section>
   );

@@ -8,22 +8,30 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 
 const iAm = `I'm `;
-const holaMundo = `<Hola Mundo />`;
-
+const title = `<Hola Mundo />`;
+const info = {
+  name: 'Esteban Restrepo',
+  details: '',
+  role: 'Senior Front-End Developer',
+};
 const icons = [
   {
+    id: 0,
     iconName: faEnvelope,
     href: 'mailto:esteban_rpo_stm@hotmail.com',
   },
   {
+    id: 1,
     iconName: faGithub,
     href: 'https://github.com/estebanrestrepo07',
   },
   {
+    id: 2,
     iconName: faLinkedinIn,
     href: 'https://www.linkedin.com/in/esteban-restrepo-santamaria-78767147/',
   },
   {
+    id: 3,
     iconName: faWhatsapp,
     href: 'https://wa.link/7ol8zk',
   },
@@ -32,16 +40,21 @@ const icons = [
 const Home = () => (
   <div className='flex flex-col h-screen justify-between'>
     <div className='m-auto'>
-      <h1 className='text-blue-500'>{holaMundo}</h1>
+      <h1 className='text-blue-500'>{title}</h1>
       <h1>
         <span className='text-blue-500'>{iAm}</span>
-        <span className='text-indigo-500'>Esteban Restrepo</span>
+        <span className='text-indigo-500'>{info.name}</span>
       </h1>
-      <h4 className='text-blue-500'>Senior Front-End Developer</h4>
+      <h4 className='text-blue-500'>{info.role}</h4>
 
       <div className='icons-ref mt-6'>
         {icons.map((icon) => (
-          <a href={icon.href} target='_blank' rel='noopener noreferrer'>
+          <a
+            key={icon.id}
+            href={icon.href}
+            target='_blank'
+            rel='noopener noreferrer'
+          >
             <FontAwesomeIcon
               icon={icon.iconName}
               className='mr-2 text-2xl text-blue-500'

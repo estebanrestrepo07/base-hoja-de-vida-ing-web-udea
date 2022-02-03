@@ -6,6 +6,7 @@ import senaLogo from 'styles/assets/img/sena-logo.png';
 import udeaLogo from 'styles/assets/img/udea-logo.png';
 
 const GapInfo = {
+  id: 0,
   imageSrc: gapLogo,
   title: 'Senior Front-End Developer',
   detail: 'Growth Acceleration Partners',
@@ -39,6 +40,7 @@ const GapInfo = {
 };
 
 const YuxiInfo = {
+  id: 1,
   imageSrc: yuxiLogo,
   title: 'Front-End Developer',
   detail: 'Yuxi Global',
@@ -65,6 +67,7 @@ const YuxiInfo = {
 };
 
 const UdeAInfo = {
+  id: 0,
   imageSrc: udeaLogo,
   title: 'Computer Science Engineering',
   detail: 'University of Antioquia',
@@ -75,6 +78,7 @@ const UdeAInfo = {
 };
 
 const senaInfo = {
+  id: 1,
   imageSrc: senaLogo,
   title: 'Network Administration',
   detail: 'SENA',
@@ -85,6 +89,7 @@ const senaInfo = {
 };
 
 const WebPackInfo = {
+  id: 0,
   title: 'WebPack',
   detail: 'Platzi',
   startDate: '2021',
@@ -94,6 +99,7 @@ const WebPackInfo = {
 };
 
 const AIForEngInfo = {
+  id: 1,
   title: 'AI for Engineering and Science',
   detail: 'UdeA',
   startDate: '2020',
@@ -103,6 +109,7 @@ const AIForEngInfo = {
 };
 
 const SafeInfo = {
+  id: 2,
   title: 'Certified SAFe® 4 Practitioner',
   detail: 'Scaled Agile',
   startDate: '2020',
@@ -112,18 +119,21 @@ const SafeInfo = {
 };
 
 const RideBikeInfo = {
+  id: 0,
   title: 'Ride Motorcycle',
   showDates: false,
   showMoreInfoIcon: false,
 };
 
 const MovieInfo = {
+  id: 1,
   title: 'Go to the movies & Netflix',
   showDates: false,
   showMoreInfoIcon: false,
 };
 
 const SportsInfo = {
+  id: 2,
   title: 'Play Sports',
   showDates: false,
   showMoreInfoIcon: false,
@@ -136,18 +146,22 @@ const hobbiesCards = [RideBikeInfo, MovieInfo, SportsInfo];
 
 const CareerSections = [
   {
+    id: 0,
     title: 'Experience',
     cards: experienceCards,
   },
   {
+    id: 1,
     title: 'Academic',
     cards: academicsCards,
   },
   {
+    id: 2,
     title: 'Courses & Certifications',
     cards: coursesCards,
   },
   {
+    id: 3,
     title: 'Hobbies',
     cards: hobbiesCards,
   },
@@ -155,15 +169,13 @@ const CareerSections = [
 
 const Career = () => (
   <div className='flex flex-col h-screen justify-between'>
-    {CareerSections.map((section, index) => {
-      return (
-        <CareerSection
-          key={`card_${index + 1}`}
-          title={section.title}
-          cards={section.cards}
-        />
-      );
-    })}
+    {CareerSections.map((section) => (
+      <CareerSection
+        key={section.id}
+        title={section.title}
+        cards={section.cards}
+      />
+    ))}
   </div>
 );
 
