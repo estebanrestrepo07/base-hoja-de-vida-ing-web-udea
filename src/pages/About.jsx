@@ -16,7 +16,7 @@ const About = () => (
         />
       </div>
 
-      <section className='about-me-info my-6 ml-8 lg:ml-0 flex-col md:w-3/4 lg:w-2/4'>
+      <section className='about-me-info my-6 md:ml-8 lg:ml-0 flex-col md:w-3/4 lg:w-2/4'>
         <h2 className='about-me-info-title flex justify-center md:justify-start text-blue-500 mb-3'>
           About me
         </h2>
