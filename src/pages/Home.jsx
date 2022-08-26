@@ -40,7 +40,7 @@ const icons = [
 
 const Home = () => (
   <div className='flex flex-col h-screen justify-between'>
-    <div className='m-auto'>
+    <div className='m-auto px-4'>
       <h1 className='text-blue-500'>{title}</h1>
       <h1>
         <span className='text-blue-500'>{iAm}</span>
